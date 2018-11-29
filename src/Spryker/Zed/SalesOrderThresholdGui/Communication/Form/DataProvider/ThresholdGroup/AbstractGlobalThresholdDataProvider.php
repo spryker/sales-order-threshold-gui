@@ -10,7 +10,7 @@ namespace Spryker\Zed\SalesOrderThresholdGui\Communication\Form\DataProvider\Thr
 abstract class AbstractGlobalThresholdDataProvider
 {
     /**
-     * @var array|\Spryker\Zed\SalesOrderThresholdGuiExtension\Dependency\Plugin\SalesOrderThresholdFormExpanderPluginInterface[]
+     * @var \Spryker\Zed\SalesOrderThresholdGuiExtension\Dependency\Plugin\SalesOrderThresholdFormExpanderPluginInterface[]
      */
     protected $formExpanderPlugins;
 
