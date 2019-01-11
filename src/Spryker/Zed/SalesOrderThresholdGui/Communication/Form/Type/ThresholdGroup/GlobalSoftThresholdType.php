@@ -5,10 +5,9 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Spryker\Zed\SalesOrderThresholdGui\Communication\Form;
+namespace Spryker\Zed\SalesOrderThresholdGui\Communication\Form\Type\ThresholdGroup;
 
-use Spryker\Zed\Kernel\Communication\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Spryker\Zed\SalesOrderThresholdGui\Communication\Form\GlobalThresholdType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -16,12 +15,8 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  * @method \Spryker\Zed\SalesOrderThresholdGui\Communication\SalesOrderThresholdGuiCommunicationFactory getFactory()
  * @method \Spryker\Zed\SalesOrderThresholdGui\SalesOrderThresholdGuiConfig getConfig()
  */
-class SettingsForm extends AbstractType
+class GlobalSoftThresholdType extends AbstractGlobalThresholdType
 {
-    public const OPTION_TAX_SETS = 'OPTION_TAX_SETS';
-
-    public const FIELD_TAX_SET = 'fkTaxSet';
-
     /**
      * @param \Symfony\Component\Form\FormBuilderInterface $builder
      * @param array $options
@@ -30,7 +25,9 @@ class SettingsForm extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        $this->addTaxSetField($builder, $options);
+        $this->addStrategyField($builder, $options[GlobalThresholdType::OPTION_SOFT_TYPES_ARRAY]);
+        $this->addThresholdValueField($builder, $options);
+        $this->addLocalizedForms($builder);
     }
 
     /**
@@ -40,26 +37,8 @@ class SettingsForm extends AbstractType
      */
     public function configureOptions(OptionsResolver $resolver): void
     {
-        $resolver->setRequired(static::OPTION_TAX_SETS);
-    }
+        parent::configureOptions($resolver);
 
-    /**
-     * @param \Symfony\Component\Form\FormBuilderInterface $builder
-     * @param array $options
-     *
-     * @return $this
-     */
-    protected function addTaxSetField(FormBuilderInterface $builder, array $options): self
-    {
-        $builder->add(
-            static::FIELD_TAX_SET,
-            ChoiceType::class,
-            [
-                'label' => 'Tax set',
-                'choices' => $options[static::OPTION_TAX_SETS],
-            ]
-        );
-
-        return $this;
+        $resolver->setRequired(GlobalThresholdType::OPTION_SOFT_TYPES_ARRAY);
     }
 }

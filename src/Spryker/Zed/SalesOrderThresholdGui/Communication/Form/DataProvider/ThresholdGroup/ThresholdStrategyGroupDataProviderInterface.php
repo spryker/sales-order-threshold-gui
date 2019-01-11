@@ -5,17 +5,17 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Spryker\Zed\SalesOrderThresholdGui\Communication\Form\Mapper;
+namespace Spryker\Zed\SalesOrderThresholdGui\Communication\Form\DataProvider\ThresholdGroup;
 
 use Generated\Shared\Transfer\SalesOrderThresholdTransfer;
 
-interface GlobalThresholdFormMapperInterface
+interface ThresholdStrategyGroupDataProviderInterface
 {
     /**
-     * @param array $data
      * @param \Generated\Shared\Transfer\SalesOrderThresholdTransfer $salesOrderThresholdTransfer
+     * @param array $data
      *
-     * @return \Generated\Shared\Transfer\SalesOrderThresholdTransfer
+     * @return array
      */
-    public function map(array $data, SalesOrderThresholdTransfer $salesOrderThresholdTransfer): SalesOrderThresholdTransfer;
+    public function mapSalesOrderThresholdValueTransferToFormData(SalesOrderThresholdTransfer $salesOrderThresholdTransfer, array $data): array;
 }
