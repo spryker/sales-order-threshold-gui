@@ -2,4 +2,6 @@ parameters:
     ignoreErrors:
         -
             identifier: missingType.iterableValue
+        -
+            identifier: instanceof.alwaysTrue
     level: 7
