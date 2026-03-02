@@ -14,8 +14,5 @@ interface SalesOrderThresholdGuiToLocaleFacadeInterface
      */
     public function getLocaleCollection(): array;
 
-    /**
-     * @return string
-     */
     public function getCurrentLocaleName(): string;
 }

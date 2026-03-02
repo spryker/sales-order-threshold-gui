@@ -33,11 +33,6 @@ class GlobalSoftThresholdType extends AbstractGlobalThresholdType
         $this->setPlaceholderForEmptySoftThreshold($builder);
     }
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         parent::configureOptions($resolver);
@@ -45,11 +40,6 @@ class GlobalSoftThresholdType extends AbstractGlobalThresholdType
         $resolver->setRequired(GlobalThresholdType::OPTION_SOFT_TYPES_ARRAY);
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormBuilderInterface $builder
-     *
-     * @return void
-     */
     protected function setPlaceholderForEmptySoftThreshold(FormBuilderInterface $builder): void
     {
         $builder->addEventListener(FormEvents::PRE_SET_DATA, function (FormEvent $event) {

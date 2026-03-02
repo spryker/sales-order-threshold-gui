@@ -23,10 +23,6 @@ class SettingsFormDataProvider
      */
     protected $salesOrderThresholdFacade;
 
-    /**
-     * @param \Spryker\Zed\SalesOrderThresholdGui\Dependency\Facade\SalesOrderThresholdGuiToTaxFacadeInterface $taxFacade
-     * @param \Spryker\Zed\SalesOrderThresholdGui\Dependency\Facade\SalesOrderThresholdGuiToSalesOrderThresholdFacadeInterface $salesOrderThresholdFacade
-     */
     public function __construct(
         SalesOrderThresholdGuiToTaxFacadeInterface $taxFacade,
         SalesOrderThresholdGuiToSalesOrderThresholdFacadeInterface $salesOrderThresholdFacade
@@ -47,17 +43,11 @@ class SettingsFormDataProvider
         return $options;
     }
 
-    /**
-     * @return array
-     */
     public function getData(): array
     {
         return [SettingsType::FIELD_TAX_SET => $this->salesOrderThresholdFacade->findSalesOrderThresholdTaxSetId()];
     }
 
-    /**
-     * @return array
-     */
     protected function createTaxSetsList(): array
     {
         $taxSetCollection = $this->taxFacade->getTaxSets();

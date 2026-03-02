@@ -52,11 +52,6 @@ class GlobalThresholdDataProviderResolver implements GlobalThresholdDataProvider
         return new $dataProvider($this->formExpanderPlugins);
     }
 
-    /**
-     * @param string $salesOrderThresholdTypeGroup
-     *
-     * @return bool
-     */
     public function hasGlobalThresholdDataProviderByStrategyGroup(string $salesOrderThresholdTypeGroup): bool
     {
         return array_key_exists($salesOrderThresholdTypeGroup, $this->config->getStrategyGroupToDataProviderMap());

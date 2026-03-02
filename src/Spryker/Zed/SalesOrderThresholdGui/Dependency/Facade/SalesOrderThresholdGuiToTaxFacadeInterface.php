@@ -11,8 +11,5 @@ use Generated\Shared\Transfer\TaxSetCollectionTransfer;
 
 interface SalesOrderThresholdGuiToTaxFacadeInterface
 {
-    /**
-     * @return \Generated\Shared\Transfer\TaxSetCollectionTransfer
-     */
     public function getTaxSets(): TaxSetCollectionTransfer;
 }

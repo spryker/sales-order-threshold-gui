@@ -20,10 +20,5 @@ interface GlobalThresholdDataProviderResolverInterface
      */
     public function resolveGlobalThresholdDataProviderByStrategyGroup(string $salesOrderThresholdTypeGroup): ThresholdStrategyGroupDataProviderInterface;
 
-    /**
-     * @param string $salesOrderThresholdTypeGroup
-     *
-     * @return bool
-     */
     public function hasGlobalThresholdDataProviderByStrategyGroup(string $salesOrderThresholdTypeGroup): bool;
 }

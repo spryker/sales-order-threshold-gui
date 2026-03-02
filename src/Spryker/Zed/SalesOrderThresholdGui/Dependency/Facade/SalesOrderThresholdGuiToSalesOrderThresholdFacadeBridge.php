@@ -26,22 +26,12 @@ class SalesOrderThresholdGuiToSalesOrderThresholdFacadeBridge implements SalesOr
         $this->salesOrderThresholdFacade = $salesOrderThresholdFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SalesOrderThresholdTransfer $salesOrderThresholdTransfer
-     *
-     * @return \Generated\Shared\Transfer\SalesOrderThresholdTransfer
-     */
     public function saveSalesOrderThreshold(
         SalesOrderThresholdTransfer $salesOrderThresholdTransfer
     ): SalesOrderThresholdTransfer {
         return $this->salesOrderThresholdFacade->saveSalesOrderThreshold($salesOrderThresholdTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SalesOrderThresholdTransfer $salesOrderThresholdTransfer
-     *
-     * @return bool
-     */
     public function deleteSalesOrderThreshold(
         SalesOrderThresholdTransfer $salesOrderThresholdTransfer
     ): bool {
@@ -61,19 +51,11 @@ class SalesOrderThresholdGuiToSalesOrderThresholdFacadeBridge implements SalesOr
         return $this->salesOrderThresholdFacade->getSalesOrderThresholds($storeTransfer, $currencyTransfer);
     }
 
-    /**
-     * @return int|null
-     */
     public function findSalesOrderThresholdTaxSetId(): ?int
     {
         return $this->salesOrderThresholdFacade->findSalesOrderThresholdTaxSetId();
     }
 
-    /**
-     * @param int $idTaxSet
-     *
-     * @return void
-     */
     public function saveSalesOrderThresholdTaxSet(int $idTaxSet): void
     {
         $this->salesOrderThresholdFacade->saveSalesOrderThresholdTaxSet($idTaxSet);

@@ -20,10 +20,5 @@ interface GlobalThresholdFormMapperResolverInterface
      */
     public function resolveGlobalThresholdFormMapperClassInstanceByStrategyGroup(string $salesOrderThresholdTypeGroup): GlobalThresholdFormMapperInterface;
 
-    /**
-     * @param string $salesOrderThresholdTypeGroup
-     *
-     * @return bool
-     */
     public function hasGlobalThresholdFormMapperByStrategyGroup(string $salesOrderThresholdTypeGroup): bool;
 }

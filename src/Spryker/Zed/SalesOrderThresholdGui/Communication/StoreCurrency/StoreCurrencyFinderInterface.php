@@ -12,18 +12,7 @@ use Generated\Shared\Transfer\StoreTransfer;
 
 interface StoreCurrencyFinderInterface
 {
-    /**
-     * @param string|null $storeCurrencyRequestParam
-     *
-     * @return \Generated\Shared\Transfer\StoreTransfer
-     */
     public function getStoreTransferFromRequestParam(?string $storeCurrencyRequestParam): StoreTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     * @param string|null $storeCurrencyRequestParam
-     *
-     * @return \Generated\Shared\Transfer\CurrencyTransfer
-     */
     public function getCurrencyTransferFromRequestParam(StoreTransfer $storeTransfer, ?string $storeCurrencyRequestParam): CurrencyTransfer;
 }

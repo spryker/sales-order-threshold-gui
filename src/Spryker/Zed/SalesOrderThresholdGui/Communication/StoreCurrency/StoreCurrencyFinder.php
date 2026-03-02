@@ -25,10 +25,6 @@ class StoreCurrencyFinder implements StoreCurrencyFinderInterface
      */
     protected $storeFacade;
 
-    /**
-     * @param \Spryker\Zed\SalesOrderThresholdGui\Dependency\Facade\SalesOrderThresholdGuiToCurrencyFacadeInterface $currencyFacade
-     * @param \Spryker\Zed\SalesOrderThresholdGui\Dependency\Facade\SalesOrderThresholdGuiToStoreFacadeInterface $storeFacade
-     */
     public function __construct(
         SalesOrderThresholdGuiToCurrencyFacadeInterface $currencyFacade,
         SalesOrderThresholdGuiToStoreFacadeInterface $storeFacade
@@ -37,12 +33,6 @@ class StoreCurrencyFinder implements StoreCurrencyFinderInterface
         $this->storeFacade = $storeFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     * @param string|null $storeCurrencyRequestParam
-     *
-     * @return \Generated\Shared\Transfer\CurrencyTransfer
-     */
     public function getCurrencyTransferFromRequestParam(StoreTransfer $storeTransfer, ?string $storeCurrencyRequestParam): CurrencyTransfer
     {
         if (!$storeCurrencyRequestParam) {
@@ -57,11 +47,6 @@ class StoreCurrencyFinder implements StoreCurrencyFinderInterface
         return $this->currencyFacade->fromIsoCode($currencyCode);
     }
 
-    /**
-     * @param string|null $storeCurrencyRequestParam
-     *
-     * @return \Generated\Shared\Transfer\StoreTransfer
-     */
     public function getStoreTransferFromRequestParam(?string $storeCurrencyRequestParam): StoreTransfer
     {
         if (!$storeCurrencyRequestParam) {

@@ -37,11 +37,6 @@ abstract class AbstractGlobalThresholdType extends AbstractType
      */
     public const FIELD_THRESHOLD = 'threshold';
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         parent::configureOptions($resolver);

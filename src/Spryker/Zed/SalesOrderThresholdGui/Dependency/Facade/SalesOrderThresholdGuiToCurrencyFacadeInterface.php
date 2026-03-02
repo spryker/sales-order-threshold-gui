@@ -18,9 +18,6 @@ interface SalesOrderThresholdGuiToCurrencyFacadeInterface
      */
     public function getAllStoresWithCurrencies(): array;
 
-    /**
-     * @return \Generated\Shared\Transfer\CurrencyTransfer
-     */
     public function getCurrent(): CurrencyTransfer;
 
     /**

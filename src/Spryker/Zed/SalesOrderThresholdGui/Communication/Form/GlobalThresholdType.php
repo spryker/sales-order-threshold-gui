@@ -93,11 +93,6 @@ class GlobalThresholdType extends AbstractType
         $this->addPluginForms($builder, $options);
     }
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         parent::configureOptions($resolver);
@@ -113,20 +108,11 @@ class GlobalThresholdType extends AbstractType
         ]);
     }
 
-    /**
-     * @param string $prefix
-     * @param string $localeCode
-     *
-     * @return string
-     */
     public static function getLocalizedFormName(string $prefix, string $localeCode): string
     {
         return $prefix . '_' . $localeCode;
     }
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return static::TYPE_NAME;

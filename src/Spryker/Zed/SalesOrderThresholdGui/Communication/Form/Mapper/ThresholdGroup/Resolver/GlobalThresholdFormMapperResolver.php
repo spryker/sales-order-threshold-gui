@@ -62,11 +62,6 @@ class GlobalThresholdFormMapperResolver implements GlobalThresholdFormMapperReso
         return new $mapperClass($this->localeFacade, $this->formExpanderPlugins);
     }
 
-    /**
-     * @param string $salesOrderThresholdTypeGroup
-     *
-     * @return bool
-     */
     public function hasGlobalThresholdFormMapperByStrategyGroup(string $salesOrderThresholdTypeGroup): bool
     {
         return array_key_exists($salesOrderThresholdTypeGroup, $this->config->getStrategyGroupToFormTypeMap());

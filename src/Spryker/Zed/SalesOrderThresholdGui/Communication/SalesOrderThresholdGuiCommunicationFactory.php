@@ -35,12 +35,6 @@ use Symfony\Component\Form\FormInterface;
  */
 class SalesOrderThresholdGuiCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     * @param \Generated\Shared\Transfer\CurrencyTransfer $currencyTransfer
-     *
-     * @return \Symfony\Component\Form\FormInterface
-     */
     public function createGlobalThresholdForm(
         StoreTransfer $storeTransfer,
         CurrencyTransfer $currencyTransfer
@@ -54,11 +48,6 @@ class SalesOrderThresholdGuiCommunicationFactory extends AbstractCommunicationFa
         );
     }
 
-    /**
-     * @param \Spryker\Zed\SalesOrderThresholdGui\Communication\Form\DataProvider\SettingsFormDataProvider $settingsFormDataProvider
-     *
-     * @return \Symfony\Component\Form\FormInterface
-     */
     public function getSettingsForm(SettingsFormDataProvider $settingsFormDataProvider): FormInterface
     {
         return $this->getFormFactory()->create(
@@ -68,9 +57,6 @@ class SalesOrderThresholdGuiCommunicationFactory extends AbstractCommunicationFa
         );
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdGui\Communication\Form\DataProvider\SettingsFormDataProvider
-     */
     public function createSettingsFromDataProvider(): SettingsFormDataProvider
     {
         return new SettingsFormDataProvider(
@@ -79,9 +65,6 @@ class SalesOrderThresholdGuiCommunicationFactory extends AbstractCommunicationFa
         );
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdGui\Communication\Form\DataProvider\GlobalThresholdDataProvider
-     */
     public function createGlobalThresholdFormDataProvider(): GlobalThresholdDataProvider
     {
         return new GlobalThresholdDataProvider(
@@ -93,9 +76,6 @@ class SalesOrderThresholdGuiCommunicationFactory extends AbstractCommunicationFa
         );
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdGui\Communication\StoreCurrency\StoreCurrencyFinderInterface
-     */
     public function createStoreCurrencyFinder(): StoreCurrencyFinderInterface
     {
         return new StoreCurrencyFinder(
@@ -104,9 +84,6 @@ class SalesOrderThresholdGuiCommunicationFactory extends AbstractCommunicationFa
         );
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdGui\Communication\Form\Mapper\ThresholdGroup\Resolver\GlobalThresholdFormMapperResolverInterface
-     */
     public function createGlobalThresholdFormMapperResolver(): GlobalThresholdFormMapperResolverInterface
     {
         return new GlobalThresholdFormMapperResolver(
@@ -116,9 +93,6 @@ class SalesOrderThresholdGuiCommunicationFactory extends AbstractCommunicationFa
         );
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdGui\Communication\Form\DataProvider\ThresholdGroup\Resolver\GlobalThresholdDataProviderResolverInterface
-     */
     public function createGlobalSoftThresholdDataProviderResolver(): GlobalThresholdDataProviderResolverInterface
     {
         return new GlobalThresholdDataProviderResolver(
@@ -127,9 +101,6 @@ class SalesOrderThresholdGuiCommunicationFactory extends AbstractCommunicationFa
         );
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdGui\Communication\Form\Constraint\ThresholdStrategyConstraint
-     */
     public function createThresholdStrategyConstraint(): ThresholdStrategyConstraint
     {
         return new ThresholdStrategyConstraint([
@@ -137,49 +108,31 @@ class SalesOrderThresholdGuiCommunicationFactory extends AbstractCommunicationFa
         ]);
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdGui\Dependency\Facade\SalesOrderThresholdGuiToCurrencyFacadeInterface
-     */
     public function getCurrencyFacade(): SalesOrderThresholdGuiToCurrencyFacadeInterface
     {
         return $this->getProvidedDependency(SalesOrderThresholdGuiDependencyProvider::FACADE_CURRENCY);
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdGui\Dependency\Facade\SalesOrderThresholdGuiToStoreFacadeInterface
-     */
     public function getStoreFacade(): SalesOrderThresholdGuiToStoreFacadeInterface
     {
         return $this->getProvidedDependency(SalesOrderThresholdGuiDependencyProvider::FACADE_STORE);
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdGui\Dependency\Facade\SalesOrderThresholdGuiToSalesOrderThresholdFacadeInterface
-     */
     public function getSalesOrderThresholdFacade(): SalesOrderThresholdGuiToSalesOrderThresholdFacadeInterface
     {
         return $this->getProvidedDependency(SalesOrderThresholdGuiDependencyProvider::FACADE_SALES_ORDER_THRESHOLD);
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdGui\Dependency\Facade\SalesOrderThresholdGuiToMoneyFacadeInterface
-     */
     public function getMoneyFacade(): SalesOrderThresholdGuiToMoneyFacadeInterface
     {
         return $this->getProvidedDependency(SalesOrderThresholdGuiDependencyProvider::FACADE_MONEY);
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdGui\Dependency\Facade\SalesOrderThresholdGuiToLocaleFacadeInterface
-     */
     public function getLocaleFacade(): SalesOrderThresholdGuiToLocaleFacadeInterface
     {
         return $this->getProvidedDependency(SalesOrderThresholdGuiDependencyProvider::FACADE_LOCALE);
     }
 
-    /**
-     * @return \Spryker\Zed\SalesOrderThresholdGui\Dependency\Facade\SalesOrderThresholdGuiToTaxFacadeInterface
-     */
     public function getTaxFacade(): SalesOrderThresholdGuiToTaxFacadeInterface
     {
         return $this->getProvidedDependency(SalesOrderThresholdGuiDependencyProvider::FACADE_TAX);

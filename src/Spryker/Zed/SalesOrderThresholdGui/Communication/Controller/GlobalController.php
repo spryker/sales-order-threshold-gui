@@ -63,14 +63,6 @@ class GlobalController extends AbstractController
         ]);
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     * @param \Symfony\Component\Form\FormInterface $globalThresholdForm
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     * @param \Generated\Shared\Transfer\CurrencyTransfer $currencyTransfer
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
-     */
     protected function handleFormSubmission(
         Request $request,
         FormInterface $globalThresholdForm,
@@ -105,14 +97,6 @@ class GlobalController extends AbstractController
         return $this->redirectResponse($request->getRequestUri());
     }
 
-    /**
-     * @param array $thresholdData
-     * @param string $strategyGroup
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     * @param \Generated\Shared\Transfer\CurrencyTransfer $currencyTransfer
-     *
-     * @return void
-     */
     protected function handleThresholdData(
         array $thresholdData,
         string $strategyGroup,
@@ -135,12 +119,6 @@ class GlobalController extends AbstractController
         $this->saveSalesOrderThreshold($salesOrderThresholdTransfer);
     }
 
-    /**
-     * @param array $thresholdData
-     * @param string $strategyGroup
-     *
-     * @return bool
-     */
     protected function canMapThresholdData(array $thresholdData, string $strategyGroup): bool
     {
         if (!isset($thresholdData[AbstractGlobalThresholdType::FIELD_STRATEGY])) {
@@ -154,11 +132,6 @@ class GlobalController extends AbstractController
             );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SalesOrderThresholdTransfer $salesOrderThresholdTransfer
-     *
-     * @return void
-     */
     protected function saveSalesOrderThreshold(SalesOrderThresholdTransfer $salesOrderThresholdTransfer): void
     {
         if (!$salesOrderThresholdTransfer->getSalesOrderThresholdValue()->getThreshold()) {
@@ -176,12 +149,6 @@ class GlobalController extends AbstractController
             ->saveSalesOrderThreshold($salesOrderThresholdTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     * @param string|null $storeCurrencyRequestParam
-     *
-     * @return \Generated\Shared\Transfer\CurrencyTransfer
-     */
     protected function getCurrencyTransferFromRequest(StoreTransfer $storeTransfer, ?string $storeCurrencyRequestParam): CurrencyTransfer
     {
         return $this->getFactory()
@@ -189,11 +156,6 @@ class GlobalController extends AbstractController
             ->getCurrencyTransferFromRequestParam($storeTransfer, $storeCurrencyRequestParam);
     }
 
-    /**
-     * @param string|null $storeCurrencyRequestParam
-     *
-     * @return \Generated\Shared\Transfer\StoreTransfer
-     */
     protected function getStoreTransferFromRequest(?string $storeCurrencyRequestParam): StoreTransfer
     {
         return $this->getFactory()
@@ -201,13 +163,6 @@ class GlobalController extends AbstractController
             ->getStoreTransferFromRequestParam($storeCurrencyRequestParam);
     }
 
-    /**
-     * @param int|null $idSalesOrderThreshold
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     * @param \Generated\Shared\Transfer\CurrencyTransfer $currencyTransfer
-     *
-     * @return \Generated\Shared\Transfer\SalesOrderThresholdTransfer
-     */
     protected function createSalesOrderThresholdTransfer(
         ?int $idSalesOrderThreshold,
         StoreTransfer $storeTransfer,

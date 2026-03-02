@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\StoreTransfer;
 
 interface SalesOrderThresholdGuiToStoreFacadeInterface
 {
-    /**
-     * @param bool $fallbackToDefault
-     *
-     * @return \Generated\Shared\Transfer\StoreTransfer
-     */
     public function getCurrentStore(bool $fallbackToDefault = false): StoreTransfer;
 
     /**

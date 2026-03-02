@@ -13,20 +13,10 @@ use Generated\Shared\Transfer\StoreTransfer;
 
 interface SalesOrderThresholdGuiToSalesOrderThresholdFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\SalesOrderThresholdTransfer $salesOrderThresholdTransfer
-     *
-     * @return \Generated\Shared\Transfer\SalesOrderThresholdTransfer
-     */
     public function saveSalesOrderThreshold(
         SalesOrderThresholdTransfer $salesOrderThresholdTransfer
     ): SalesOrderThresholdTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\SalesOrderThresholdTransfer $salesOrderThresholdTransfer
-     *
-     * @return bool
-     */
     public function deleteSalesOrderThreshold(
         SalesOrderThresholdTransfer $salesOrderThresholdTransfer
     ): bool;
@@ -42,15 +32,7 @@ interface SalesOrderThresholdGuiToSalesOrderThresholdFacadeInterface
         CurrencyTransfer $currencyTransfer
     ): array;
 
-    /**
-     * @return int|null
-     */
     public function findSalesOrderThresholdTaxSetId(): ?int;
 
-    /**
-     * @param int $idTaxSet
-     *
-     * @return void
-     */
     public function saveSalesOrderThresholdTaxSet(int $idTaxSet): void;
 }

@@ -66,12 +66,6 @@ class ThresholdStrategyConstraintValidator extends ConstraintValidator
         }
     }
 
-    /**
-     * @param \Spryker\Zed\SalesOrderThresholdGuiExtension\Dependency\Plugin\SalesOrderThresholdFormExpanderPluginInterface $salesOrderThresholdFormExpanderPlugin
-     * @param array $formData
-     *
-     * @return bool
-     */
     protected function isPluginApplicable(
         SalesOrderThresholdFormExpanderPluginInterface $salesOrderThresholdFormExpanderPlugin,
         array $formData
@@ -104,9 +98,6 @@ class ThresholdStrategyConstraintValidator extends ConstraintValidator
         return true;
     }
 
-    /**
-     * @return array
-     */
     protected function getFormData(): array
     {
         /** @var \Symfony\Component\Form\Form $form */
