@@ -18,6 +18,8 @@ use Symfony\Component\HttpFoundation\Request;
 class SalesController extends AbstractController
 {
     /**
+     * @deprecated use {@link \Spryker\Zed\SalesOrderThresholdGui\Communication\Plugin\Sales\ThresholdExpensesSalesOrderDetailDataExpanderPlugin} instead.
+     *
      * @param \Symfony\Component\HttpFoundation\Request $request
      *
      * @throws \Spryker\Zed\SalesOrderThresholdGui\Communication\Exception\OrderNotFoundException
