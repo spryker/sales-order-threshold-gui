@@ -10,6 +10,8 @@ namespace Spryker\Shared\SalesOrderThresholdGui;
 interface SalesOrderThresholdGuiConfig
 {
     /**
+     * @api
+     *
      * @see \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::THRESHOLD_EXPENSE_TYPE const.
      *
      * @var string
@@ -17,6 +19,8 @@ interface SalesOrderThresholdGuiConfig
     public const THRESHOLD_EXPENSE_TYPE = 'THRESHOLD_EXPENSE_TYPE';
 
     /**
+     * @api
+     *
      * @deprecated Will be removed in the next major.
      *
      * @uses \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::GROUP_HARD
@@ -26,6 +30,8 @@ interface SalesOrderThresholdGuiConfig
     public const GROUP_HARD = 'Hard';
 
     /**
+     * @api
+     *
      * @deprecated Will be removed in the next major.
      *
      * @uses \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::GROUP_SOFT
@@ -35,6 +41,8 @@ interface SalesOrderThresholdGuiConfig
     public const GROUP_SOFT = 'Soft';
 
     /**
+     * @api
+     *
      * @deprecated Will be removed in the next major.
      *
      * @uses \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::THRESHOLD_STRATEGY_KEY_HARD
@@ -44,6 +52,8 @@ interface SalesOrderThresholdGuiConfig
     public const HARD_TYPE_STRATEGY = 'hard-minimum-threshold';
 
     /**
+     * @api
+     *
      * @deprecated Will be removed in the next major.
      *
      * @uses \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::THRESHOLD_STRATEGY_KEY_SOFT
@@ -53,6 +63,8 @@ interface SalesOrderThresholdGuiConfig
     public const SOFT_TYPE_STRATEGY_MESSAGE = 'soft-minimum-threshold';
 
     /**
+     * @api
+     *
      * @deprecated Will be removed in the next major.
      *
      * @uses \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::THRESHOLD_STRATEGY_KEY_SOFT_FIXED_FEE
@@ -62,6 +74,8 @@ interface SalesOrderThresholdGuiConfig
     public const SOFT_TYPE_STRATEGY_FIXED = 'soft-minimum-threshold-fixed-fee';
 
     /**
+     * @api
+     *
      * @deprecated Will be removed in the next major.
      *
      * @uses \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::THRESHOLD_STRATEGY_KEY_SOFT_FLEXIBLE_FEE

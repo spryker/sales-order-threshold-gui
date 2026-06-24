@@ -18,6 +18,8 @@ use Spryker\Zed\SalesOrderThresholdGui\Communication\Form\Mapper\ThresholdGroup\
 class SalesOrderThresholdGuiConfig extends AbstractBundleConfig
 {
     /**
+     * @api
+     *
      * @uses \Spryker\Zed\SalesOrderThresholdGui\Communication\Form\GlobalThresholdType::OPTION_CURRENCY_CODE
      *
      * @var string
@@ -25,6 +27,8 @@ class SalesOrderThresholdGuiConfig extends AbstractBundleConfig
     public const OPTION_CURRENCY_CODE = 'option-currency-code';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Zed\SalesOrderThresholdGui\Communication\Form\GlobalThresholdType::OPTION_LOCALE
      *
      * @var string
@@ -32,6 +36,8 @@ class SalesOrderThresholdGuiConfig extends AbstractBundleConfig
     public const OPTION_LOCALE = 'locale';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::GROUP_HARD
      *
      * @var string
@@ -39,6 +45,8 @@ class SalesOrderThresholdGuiConfig extends AbstractBundleConfig
     public const GROUP_HARD = 'Hard';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::GROUP_HARD_MAX
      *
      * @var string
@@ -46,6 +54,8 @@ class SalesOrderThresholdGuiConfig extends AbstractBundleConfig
     public const GROUP_HARD_MAX = 'Hard-Max';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::GROUP_SOFT
      *
      * @var string
@@ -53,6 +63,8 @@ class SalesOrderThresholdGuiConfig extends AbstractBundleConfig
     public const GROUP_SOFT = 'Soft';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::THRESHOLD_STRATEGY_KEY_HARD
      *
      * @var string
@@ -60,6 +72,8 @@ class SalesOrderThresholdGuiConfig extends AbstractBundleConfig
     public const HARD_TYPE_STRATEGY = 'hard-minimum-threshold';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::THRESHOLD_STRATEGY_KEY_HARD_MAXIMUM
      *
      * @var string
@@ -67,6 +81,8 @@ class SalesOrderThresholdGuiConfig extends AbstractBundleConfig
     public const THRESHOLD_STRATEGY_KEY_HARD_MAXIMUM = 'hard-maximum-threshold';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::THRESHOLD_STRATEGY_KEY_SOFT
      *
      * @var string
@@ -74,6 +90,8 @@ class SalesOrderThresholdGuiConfig extends AbstractBundleConfig
     public const SOFT_TYPE_STRATEGY_MESSAGE = 'soft-minimum-threshold';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::THRESHOLD_STRATEGY_KEY_SOFT_FIXED_FEE
      *
      * @var string
@@ -81,6 +99,8 @@ class SalesOrderThresholdGuiConfig extends AbstractBundleConfig
     public const SOFT_TYPE_STRATEGY_FIXED = 'soft-minimum-threshold-fixed-fee';
 
     /**
+     * @api
+     *
      * @uses \Spryker\Shared\SalesOrderThreshold\SalesOrderThresholdConfig::THRESHOLD_STRATEGY_KEY_SOFT_FLEXIBLE_FEE
      *
      * @var string
@@ -88,6 +108,8 @@ class SalesOrderThresholdGuiConfig extends AbstractBundleConfig
     public const SOFT_TYPE_STRATEGY_FLEXIBLE = 'soft-minimum-threshold-flexible-fee';
 
     /**
+     * @api
+     *
      * @phpstan-var non-empty-string
      *
      * @var string
