@@ -43,6 +43,6 @@ $(document).ready(function () {
     }
 
     $('#global-threshold_storeCurrency').change(function () {
-        window.location.href = '/sales-order-threshold-gui/global?store_currency=' + $(this).val();
+        window.location.href = '/sales-order-threshold-gui/global?store_currency=' + encodeURIComponent($(this).val());
     });
 });
